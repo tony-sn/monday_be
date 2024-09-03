@@ -11,5 +11,6 @@ import { MySqlConfigService } from './config.service';
     }),
   ],
   providers: [MySqlConfigService],
+  exports: [MySqlConfigService],
 })
 export class MySqlConfigModule {}

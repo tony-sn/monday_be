@@ -6,20 +6,20 @@ export class MySqlConfigService {
   constructor(private configService: ConfigService) {}
 
   get port() {
-    return this.configService.get<string>('database.port');
+    return this.configService.get<number>('mysql.port');
   }
 
   get host() {
-    return this.configService.get<string>('database.host');
+    return this.configService.get<string>('mysql.host');
   }
   get username() {
-    return this.configService.get<string>('database.username');
+    return this.configService.get<string>('mysql.username');
   }
   get password() {
-    return this.configService.get<string>('database.password');
+    return this.configService.get<string>('mysql.password');
   }
 
   get database() {
-    return this.configService.get<string>('database.database');
+    return this.configService.get<string>('mysql.database');
   }
 }
