@@ -2,6 +2,7 @@ import { ConfigModule } from '@nestjs/config';
 import { Module } from '@nestjs/common';
 
 import configuration from './configuration';
+import { MySqlConfigService } from './config.service';
 
 @Module({
   imports: [
@@ -9,6 +10,6 @@ import configuration from './configuration';
       load: [configuration],
     }),
   ],
-  providers: [],
+  providers: [MySqlConfigService],
 })
 export class MySqlConfigModule {}
